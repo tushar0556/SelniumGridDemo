@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="PositiveTestSuite" verbose="1" parallel="tests" thread-count="3">
+
+	<!-- <parameter name="environment" value="local"></parameter> -->
+	<parameter name="environment" value="grid"></parameter>
+
+	<test name="PositiveTest-CH">
+		<parameter name="browser" value="chrome"></parameter>
+		<classes>
+			<class name="com.herokuapp.theinternet.tests.LoginTests" />
+		</classes>
+	</test>
+
+	<test name="PositiveTest-FF">
+		<parameter name="browser" value="firefox"></parameter>
+		<classes>
+			<class name="com.herokuapp.theinternet.tests.LoginTests" />
+		</classes>
+	</test>
+
+	<test name="PositiveTest-IE">
+		<parameter name="browser" value="internet explorer"></parameter>
+		<classes>
+			<class name="com.herokuapp.theinternet.tests.LoginTests" />
+		</classes>
+	</test>
+
+</suite>
