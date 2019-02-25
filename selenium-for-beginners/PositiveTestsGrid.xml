@@ -8,16 +8,16 @@
 	<test name="PositiveTest-CH">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="com.herokuapp.theinternet.tests.LoginTests" />
+			<class name="com.herokuapp.theinternet.tests.PositiveTests" />
 		</classes>
 	</test>
 
-	<!-- <test name="PositiveTest-FF">
+	<test name="PositiveTest-FF">
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="com.herokuapp.theinternet.tests.LoginTests" />
 		</classes>
-	</test> -->
+	</test>
 
 	<!-- <test name="PositiveTest-IE">
 		<parameter name="browser" value="internet explorer"></parameter>
