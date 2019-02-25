@@ -42,7 +42,7 @@ public class BrowserDriverFactory {
 
 
 	public WebDriver createDriverGrid() {
-		String hubUrl = "http://192.168.2.120:4444/wd/hub";
+		String hubUrl = "http://192.168.2.120:5555/wd/hub";
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		System.out.println("Starting " + browser + " on grid");
 
@@ -58,9 +58,10 @@ public class BrowserDriverFactory {
 		case "firefox":
 			System.out.println("Firefox browser initiated...");
 			capabilities.setBrowserName("firefox");
-			capabilities.setPlatform(Platform.VISTA);
-			capabilities.setAcceptInsecureCerts(true);
 			capabilities.setCapability("marionette", true);
+			capabilities.setPlatform(Platform.VISTA);
+//			
+//			capabilities.setAcceptInsecureCerts(true);
 			break;
 			
 		case "internet explorer":
