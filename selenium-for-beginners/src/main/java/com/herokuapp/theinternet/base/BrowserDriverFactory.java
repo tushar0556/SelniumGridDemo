@@ -7,6 +7,7 @@ import org.openqa.selenium.Platform;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
@@ -51,24 +52,28 @@ public class BrowserDriverFactory {
 		case "chrome":
 			System.out.println("Chrome browser initiated...");
 			capabilities.setBrowserName("chrome");
-			capabilities.setPlatform(Platform.VISTA);
+			capabilities.setPlatform(Platform.WINDOWS);
 			capabilities.setAcceptInsecureCerts(true);
 			break;
 
 		case "firefox":
 			System.out.println("Firefox browser initiated...");
 			capabilities.setBrowserName("firefox");
-			capabilities.setCapability("marionette", true);
-			capabilities.setPlatform(Platform.VISTA);
+			capabilities.setCapability("marionette",true);
+			capabilities.setPlatform(Platform.WINDOWS);
 //			
 //			capabilities.setAcceptInsecureCerts(true);
 			break;
 			
 		case "internet explorer":
 			System.out.println("Internet Explore browser initiated...");
-			capabilities.setBrowserName("internet explorer");
-			capabilities.setPlatform(Platform.WINDOWS);
-			capabilities.setAcceptInsecureCerts(true);
+			 capabilities.setBrowserName("internet explorer");
+			 capabilities.setPlatform(Platform.WINDOWS);
+			 capabilities.setVersion("8");
+			 capabilities.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true);
+			 capabilities.setCapability("acceptInsecureCerts", true);
+//			 capabilities.setCapability("acceptSslCerts",true);
+//			 capabilities.setAcceptInsecureCerts(true);
 			break;
 		}
 
