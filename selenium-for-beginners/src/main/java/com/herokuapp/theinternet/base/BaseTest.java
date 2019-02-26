@@ -43,7 +43,7 @@ public class BaseTest {
 	protected void tearDown() {
 		// Closing driver
 		log.info("[Closing driver]");
-		driver.quit();
+		driver.close();
 	}
 
 
